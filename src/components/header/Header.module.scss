@@ -1,0 +1,111 @@
+@import 'style/Typography.module.scss';
+
+.header {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 1rem 0;
+  height: 8vh;
+
+  .divLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .youtube {
+      margin-right: 15px;
+      color: var(--primary);
+      cursor: pointer;
+
+      &:hover {
+        color: #f70900;
+      }
+    }
+
+    .github {
+      margin-right: 15px;
+      color: var(--primary);
+      cursor: pointer;
+
+      &:hover {
+        color: #5869ba;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+    li {
+       /* Needed for the dropdown */
+      position: relative;
+      margin: 0 1rem;
+
+      &:hover > ul {
+        display: block;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: var(--error);
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--secondary);
+        display: none;
+        list-style: none;
+        padding: 0.5rem 0;
+
+        li {
+          margin: 0;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+
+          a {
+            color: var(--primary);
+            text-decoration: none;
+
+            &:hover {
+              color: var(--error);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .divItems {
+    margin-left: 40px;
+    min-width: 50%;
+  }
+
+  .icons {
+    color: var(--primary);
+
+    &:hover {
+      color: var(--error);
+    }
+  }
+
+
+}

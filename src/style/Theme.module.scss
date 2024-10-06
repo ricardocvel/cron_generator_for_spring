@@ -1,0 +1,61 @@
+@import './Palette.module.scss';
+
+@mixin light-theme {
+  --black : #{$common_black};
+  --white : #{$common_white};
+  --primary : #{$primary_light};
+  --secondary : #{$secondary_light};
+  --tertiary : #{$tertiary_light};
+  --success : #{$success_light};
+  --error : #{$error_light};
+  --warning : #{$warning_light};
+  --info : #{$info_light};
+
+    //greys
+  --50: #{map-get($grey,  50 )};
+  --100: #{map-get($grey, 100 )};
+  --200: #{map-get($grey, 200 )};
+  --300: #{map-get($grey, 300 )};
+  --400: #{map-get($grey, 400 )};
+  --500: #{map-get($grey, 500 )};
+  --600: #{map-get($grey, 600 )};
+  --700: #{map-get($grey, 700 )};
+  --800: #{map-get($grey, 800 )};
+  --900: #{map-get($grey, 900 )};
+  --A100: #{map-get($grey, A100 )};
+  --A200: #{map-get($grey, A200 )};
+  --A400: #{map-get($grey, A400 )};
+  --A700: #{map-get($grey, A700 )};
+}
+
+
+
+
+@mixin dark-theme {
+  --black : #{$common_black};
+  --white : #{$common_white};
+  --primary : #{$primary_dark};
+  --secondary : #{$secondary_dark};
+  --tertiary : #{$tertiary_dark};
+  --success : #{$success_dark};
+  --error : #{$error_dark};
+  --warning : #{$warning_dark};
+  --info : #{$info_dark};
+
+  //greys
+  --500 :  map-get($grey, 500);
+  --50: #{map-get($grey,  50 )};
+  --100: #{map-get($grey, 100 )};
+  --200: #{map-get($grey, 200 )};
+  --300: #{map-get($grey, 300 )};
+  --400: #{map-get($grey, 400 )};
+  --500: #{map-get($grey, 500 )};
+  --600: #{map-get($grey, 600 )};
+  --700: #{map-get($grey, 700 )};
+  --800: #{map-get($grey, 800 )};
+  --900: #{map-get($grey, 900 )};
+  --A100: #{map-get($grey, A100 )};
+  --A200: #{map-get($grey, A200 )};
+  --A400: #{map-get($grey, A400 )};
+  --A700: #{map-get($grey, A700 )};
+}

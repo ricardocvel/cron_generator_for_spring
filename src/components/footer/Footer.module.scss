@@ -1,0 +1,34 @@
+  .footer {
+    width: 100%;
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 1rem 0;
+    bottom: 0;
+    position: fixed;
+    height: 8vh;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        text-align: center;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .icons {
+        margin-left: 1rem;
+
+        &:hover {
+          color: var(--error);
+        }
+
+      }
+
+    }
+    // background-color: var(--secondary);
+
+  }

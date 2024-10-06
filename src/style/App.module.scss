@@ -1,0 +1,26 @@
+@import './Reset.module.scss';
+@import './Theme.module.scss';
+@import './Typography.module.scss';
+
+
+:root {
+  @include light-theme()
+}
+
+.light {
+  @include light-theme()
+}
+
+.dark {
+  @include dark-theme()
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 16px;
+  height: 50px;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+}

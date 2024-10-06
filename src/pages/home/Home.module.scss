@@ -1,0 +1,258 @@
+@import 'style/Theme.module.scss';
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: var(--secondary);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  //   bottom: 0;
+  margin-left: 10%;
+  width: 90%;
+  z-index: 1000;
+}
+
+//section 01
+.presentation {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 88vh;
+}
+
+.description {
+  margin-top: 6%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6rem;
+  width: 36%;
+
+  div {
+    background-color: var(--primary);
+    border-radius: 4%;
+  }
+}
+
+.title1 {
+  font-size: 1.8rem;
+}
+
+.text1 {
+  font-size: 1.4rem;
+  max-width: 80%;
+}
+
+//section 02
+.about {
+  // background-color: var(--primary);
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88vh;
+  // width: 99vw;
+
+  .aboutContainerImg {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10%;
+
+    div {
+      border-radius: 4%;
+      position: relative;
+    }
+
+    img {
+      display: block;
+      border-radius: 4%;
+    }
+
+    .prevButton,
+    .nextButton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    .prevButton {
+      left: 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .nextButton {
+      right: 0;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  .aboutDescription {
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 10rem;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-size: 1.4rem;
+      text-align: justify;
+    }
+  }
+}
+
+
+//section 03
+.contact {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 88vh;
+    margin-left: 8%;
+
+    .contactDescription {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contactLinks {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 5%;
+
+      p {
+        font-size: 1.4rem;
+        text-align: justify;
+      }
+
+    }
+
+    .contactItems{
+      display: flex;
+      justify-content:space-around;
+      flex-direction: row;
+      margin-top: 0.5rem;
+      margin-bottom: 8rem;
+      width: 60%;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-top: 2rem;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+
+          p {
+            margin-left: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+
+            &:hover {
+              color: var(--error);
+              text-decoration: underline;
+            }
+          }
+
+        }
+      }
+    }
+}
+
+.icons {
+  color: var(--primary);
+  &:hover {
+    color: var(--error);
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+// https://www.brasilcode.com.br/35-botoes-css-com-animacao/
+.btnOne {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  width: 15rem;
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btnOne {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 1rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--error);
+    filter: brightness(85%);
+    transition: all .3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: var(--white);
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
